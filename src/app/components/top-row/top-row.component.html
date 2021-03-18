@@ -1,0 +1,65 @@
+<!-- <div class="container"> -->
+
+    <!-- THIS NAV HANDLES DISPLAY OF THE HEADING, THE CUSTOM DATES -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div id="metricButtonsDiv_dateRange_topRow" class="container-fluid">
+        <p class="navbar-brand metricHeading_dateRange_topRow">Your metrics for</p>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item topRow_bar_radiobuttons">
+            <label class="radio-inline" id="metricButton_dateRange_topRow">
+              <input id="1" type="radio" name="optradio"  data-bs-toggle="tab" data-bs-target="#nav-home" type="radio" role="tab" aria-controls="nav-home" aria-selected="true" />Today
+            </label>
+            </li>
+        <li class="nav-item topRow_bar_radiobuttons">
+            <label class="radio-inline" id="metricButton_dateRange_topRow">
+              <input type="radio" name="optradio2" data-bs-toggle="tab" data-bs-target="#nav-profile" type="radio" role="tab" aria-controls="nav-profile" aria-selected="false" />7 Days
+            </label>
+            </li>
+        <li class="nav-item topRow_bar_radiobuttons">
+            <label class="radio-inline" id="metricButton_dateRange_topRow">
+              <input type="radio" name="optradio3" data-bs-toggle="tab" data-bs-target="#nav-contact" type="radio" role="tab" aria-controls="nav-contact" aria-selected="false" />14 Days
+            </label>
+            </li>
+            <li class="nav-item topRow_bar_radiobuttons">
+              <label class="radio-inline" id="metricButton_dateRange_topRow">
+                <input type="radio" name="optradio4" data-bs-toggle="tab" data-bs-target="#nav-contact" type="radio" role="tab" aria-controls="nav-contact" aria-selected="false" />Custom Dates
+              </label>
+              
+            </li>
+            <li class="nav-item">
+              <div id="customDateCalendar_dateRange">
+                
+                <mat-form-field appearance="fill">
+                    <!-- <mat-label>Enter a date range</mat-label> -->
+                    <mat-date-range-input [rangePicker]="picker">
+                      <input matStartDate placeholder="From">
+                      <input matEndDate placeholder="To">
+                    </mat-date-range-input>
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-date-range-picker #picker></mat-date-range-picker>
+                  </mat-form-field>
+              </div>
+            </li>
+
+            <li class="nav-item dropdown topRow_bar_radiobuttons">
+              <a class="nav-link dropdown-toggle metricButton_dateRange_topRow" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                ALL
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">ALL</a></li>
+                <li><a class="dropdown-item" href="#">FOB</a></li>
+                <li><a class="dropdown-item" href="#">OFR</a></li>
+                <li><a class="dropdown-item" href="#">PLC</a></li>
+              </ul>
+            </li>
+            </ul>
+            </div>
+        </div>
+    </nav>
+  <!-- </div> -->
+
+<app-white-boxes></app-white-boxes>

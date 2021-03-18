@@ -1,0 +1,19 @@
+
+<!-- THE SIDE BAR -->
+<div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+    <br><br>
+    <a (click)="changeSideNavigationClasses()" href="/dashboard"><i class="fas fa-columns sidebar_buttons_styles" [class.sidebar_buttons_styles_active]="dashboard"></i></a>
+    <a (click)="changeSideNavigationClasses()" href="/reports"><i class="fas fa-chart-line sidebar_buttons_styles" [class.sidebar_buttons_styles_active]="reports"></i></a>
+</div>
+
+<!-- THE BURGER ICON TO OPEN THE SIDEBAR WHEN IT IS COLLAPSED -->
+<div id="main">
+  <a (click)="openNav()"> <i class="fas fa-bars fa-2x"></i></a>
+</div>
+
+<!-- THIS DIV CONTAINS THE ACTUAL DASHBOARD -->
+<div class="dashboard-components-main">
+  <router-outlet></router-outlet>
+  <br><br>
+</div>

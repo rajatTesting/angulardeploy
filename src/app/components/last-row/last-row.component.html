@@ -1,0 +1,160 @@
+<!-- FIRST TABLE WITH ALL THE FILES -->
+
+<div class="container-fluid">
+    <div class="card">
+        <div class="card-body whitebox_body">
+        <div id="whitebox_title_borderDiv">
+            <div class="row">
+                <div class="col-lg-3 col-12">
+                    <h5 class="card-title whitebox_title bottomRow_filelog_titleofbox">List of Files processed today</h5>
+                </div>
+                <div class="col-lg-9 col-12">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <!-- <div class="bottomRow_title_statusCircle green"></div> -->
+                            <!-- <span class="bottomRow_title_filestatus_text">File processed without any issues</span> -->
+                            <span class="bottomRow_title_filestatus_text">Filter By Name: </span>
+                            <input class="lastrow_filelogs_filter_input" placeholder="Name">
+                        </div>
+                        <div class="col-lg-4">
+                            <!-- <div class="bottomRow_title_statusCircle orange"></div>
+                            <span class="bottomRow_title_filestatus_text">File processing has crossed the threshold</span> -->
+                            <span class="bottomRow_title_filestatus_text">Filter By Office Code: </span>
+                            <input class="lastrow_filelogs_filter_input" placeholder="Office Code">
+                        </div>
+                        <div class="col-lg-4">
+                            <!-- <div class="bottomRow_title_statusCircle red"></div>
+                            <span class="bottomRow_title_filestatus_text">File processing has failed</span> -->
+                            <span class="bottomRow_title_filestatus_text">Filter By File Status: </span>
+                            <input class="lastrow_filelogs_filter_input" placeholder="File Status" >
+                        </div>
+                    </div>
+                   </div>
+                <!-- <div class="col-lg-1 col-12" style="align-items: center;">
+                    <div class="dropdown">
+                        <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                          Filter By
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                          <li><input class="dropdown-item" placeholder="Name"></li>
+                          <li><input class="dropdown-item" placeholder="Office Code"></li>
+                          <li><input class="dropdown-item" placeholder="File Status"></li>
+                        </ul>
+                      </div>
+                </div> -->
+            </div>
+        </div>
+        <br>
+<table mdbTable mdbTableScroll scrollX="true" scrollY="true" maxHeight="200">
+    <thead>
+      <tr>
+        <th *ngFor="let head of headElements" scope="col">{{head}} </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr mdbTableCol *ngFor="let el of elements">
+        <td><div class="bottomRow_title_statusCircle green"></div></td>
+        <th scope="row">{{el.id}}</th>
+        
+        <td>{{el.heading1}}</td>
+        <td>{{el.heading2}}</td>
+        <td>{{el.heading3}}</td>
+        <td>{{el.heading4}}</td>
+        <td>{{el.heading5}}</td>
+        <td>{{el.heading6}}</td>
+        <td>{{el.heading7}}</td>
+        <td>{{el.heading8}}</td>
+        <td>{{el.heading9}}</td>
+        <td>{{el.heading10}}</td>
+        <td>{{el.heading11}}</td>
+        <td>{{el.heading12}}</td>
+        <td>{{el.heading13}}</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="row">
+    <div class="col-lg-2"></div>
+  <div class="col-lg-10 col-12">
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="bottomRow_title_statusCircle green"></div>
+            <span class="bottomRow_title_filestatus_text">File processed without any issues</span>
+        </div>
+        <div class="col-lg-4">
+            <div class="bottomRow_title_statusCircle orange"></div>
+            <span class="bottomRow_title_filestatus_text">File processing has crossed the threshold</span>
+        </div>
+        <div class="col-lg-4">
+            <div class="bottomRow_title_statusCircle red"></div>
+            <span class="bottomRow_title_filestatus_text">File processing has failed</span>
+        </div>
+    </div>
+   </div>
+  </div>
+  </div>
+  </div>
+  <br><br>
+  <!-- TABLE WITH ERROR LOGS -->
+  <div class="container-fluid">
+    <div class="card">
+        <div class="card-body whitebox_body">
+        <div id="whitebox_title_borderDiv">
+            <div class="row">
+                <div class="col-lg-3 col-12">
+                    <h5 class="card-title whitebox_title bottomRow_filelog_titleofbox">Log with Errors</h5>
+                </div>              
+                <div class="col-12 col-lg-9">
+                  <div class="row">
+                  <div class="col-lg-6">
+                    <!-- <div class="bottomRow_title_statusCircle green"></div> -->
+                    <!-- <span class="bottomRow_title_filestatus_text">File processed without any issues</span> -->
+                    <span class="bottomRow_title_filestatus_text">Filter By Customer Name: </span>
+                    <input class="lastrow_filelogs_filter_input" placeholder="Customer Name">
+                </div>
+                <div class="col-lg-6">
+                    <!-- <div class="bottomRow_title_statusCircle orange"></div>
+                    <span class="bottomRow_title_filestatus_text">File processing has crossed the threshold</span> -->
+                    <span class="bottomRow_title_filestatus_text">Filter By File Name: </span>
+                    <input class="lastrow_filelogs_filter_input" placeholder="File Name Search">
+                </div>
+              </div>
+                </div>  
+                <!-- <div class="col-lg-1 col-12" style="align-items: center;">
+                    <div class="dropdown">
+                        <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                          Filter By
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                          <li><input class="dropdown-item" placeholder="Customer Name"></li>
+                          <li><input class="dropdown-item" placeholder="File Name Search"></li>
+                        </ul>
+                      </div>
+                </div> -->
+            </div>
+        </div>
+        <br>
+<table mdbTable mdbTableScroll scrollX="true" scrollY="true" maxHeight="200">
+    <thead>
+      <tr>
+        <th *ngFor="let head of headElements2" scope="col">{{head}} </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr mdbTableCol *ngFor="let el of elements2">
+        <th scope="row">{{el.id}}</th>
+        <td>{{el.heading1}}</td>
+        <td>{{el.heading2}}</td>
+        <td>{{el.heading3}}</td>
+        <td>{{el.heading4}}</td>
+        <!-- <td>{{el.heading5}}</td>
+        <td>{{el.heading6}}</td>
+        <td>{{el.heading7}}</td>
+        <td>{{el.heading8}}</td>
+        <td>{{el.heading9}}</td> -->
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  </div>
+  </div>

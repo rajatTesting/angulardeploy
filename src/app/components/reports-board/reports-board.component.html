@@ -1,0 +1,129 @@
+<div class="container-fluid">
+<div [class.reportsboard_reports_list]="reportsList">
+<div class="card">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-lg-10">
+                <h5 class="card-title">Online Upload Log (Online & Member Rate Upload Log)</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis-mod Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh </p>
+            </div>
+            <div class="col-lg-2">
+                <a (click)="displayReport(1)" class="btn btn-primary reportsboard_report_view_button">View</a>
+            </div>
+        </div>  
+    </div>
+  </div>
+  <br>
+  <div class="card">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-lg-10">
+                <h5 class="card-title">GRDB User Report</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis-mod Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh </p>
+            </div>
+            <div class="col-lg-2">
+                <a (click)="displayReport(2)" class="btn btn-light reportsboard_report_view_button">View</a>
+            </div>
+        </div>  
+    </div>
+  </div>
+  <br>
+  <div class="card">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-lg-10">
+                <h5 class="card-title">Locking Rates Log</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis-mod Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh </p>
+            </div>
+            <div class="col-lg-2">
+                <a (click)="displayReport(3)" class="btn btn-light reportsboard_report_view_button">View</a>
+            </div>
+        </div>  
+    </div>
+  </div>
+</div>
+
+
+<div [class.reportsboard_reports_list]="!reportsList">
+    <h2 class="reports_report_view_heading"><i (click)="displayReport('reports')" class="fas fa-arrow-left"></i> {{title}}</h2>
+    <br>
+    <div class="card">
+        <div class="card-body whitebox_body">
+        <div id="whitebox_title_borderDiv">
+            <div class="row">
+                <div class="col-lg-3 col-12">
+                    <div class="dropdown">
+                        <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                          Rate Type
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li><a class="dropdown-item">ALL</a></li>
+                            <li><a class="dropdown-item">FOB</a></li>
+                            <li><a class="dropdown-item">OFR</a></li>
+                            <li><a class="dropdown-item">PLC</a></li>
+                        </ul>
+                      </div> 
+                </div>
+                <div class="col-lg-3 col-12">
+                    <div class="dropdown">
+                        <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                          Rate Type
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li><a class="dropdown-item">ALL</a></li>
+                            <li><a class="dropdown-item">FOB</a></li>
+                            <li><a class="dropdown-item">OFR</a></li>
+                            <li><a class="dropdown-item">PLC</a></li>
+                        </ul>
+                      </div> 
+                </div>
+                <div class="col-lg-2 col-12">
+                    <div class="dropdown">
+                        <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                          Rate Type
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li><a class="dropdown-item">ALL</a></li>
+                            <li><a class="dropdown-item">FOB</a></li>
+                            <li><a class="dropdown-item">OFR</a></li>
+                            <li><a class="dropdown-item">PLC</a></li>
+                        </ul>
+                      </div> 
+                </div>
+                <div class="col-lg-4 col-12">
+                  <button class="btn btn-light btn-sm" (click)="exportcsv()"><i class="fas fa-file-csv reports_report_view_exportcsv_icon"></i> Export to CSV</button> 
+                  <button class="btn btn-light btn-sm reports_report_view_exportpdf" (click)="exportpdf()"><i class="fas fa-file-pdf reports_report_view_exportpdf_icon"></i> Export to PDF</button>
+                </div>
+            </div>
+        </div>
+        <br>
+<table mdbTable mdbTableScroll scrollX="true" id="tablepdf" scrollY="true" maxHeight="800">
+    <thead>
+      <tr>
+        <th *ngFor="let head of headElements" scope="col">{{head}} </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr mdbTableCol *ngFor="let el of elements">
+        <th scope="row">{{el.id}}</th>
+        
+        <td>{{el.heading1}}</td>
+        <td>{{el.heading2}}</td>
+        <td>{{el.heading3}}</td>
+        <td>{{el.heading4}}</td>
+        <td>{{el.heading5}}</td>
+        <td>{{el.heading6}}</td>
+        <td>{{el.heading7}}</td>
+        <td>{{el.heading8}}</td>
+        <td>{{el.heading9}}</td>
+        <td>{{el.heading10}}</td>
+        <td>{{el.heading11}}</td>
+        <td>{{el.heading12}}</td>
+        <td>{{el.heading13}}</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  </div>
+</div>
+</div>
